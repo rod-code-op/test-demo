@@ -1,92 +1,92 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lux Hotel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            text-align: center;
+        }
 
-{% block title %}Hello HomeController!
-{% endblock %}
+        header {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+        }
 
-{% block body %}
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
 
-	<form action="" class="fs-form" target="_top" method="POST">
-		<div class="fs-field">
-			<label class="fs-label" for="customer-name">Customer Name</label>
-			<input class="fs-input" id="customer-name" name="customer-name" placeholder="Enter your full name" required/>
-		</div>
-		<div class="fs-field">
-			<label class="fs-label" for="customer-phone">Phone Number</label>
-			<input class="fs-input" id="customer-phone" name="customer-phone" placeholder="(XXX) XXX-XXXX" required/>
-		</div>
-		<div class="fs-field">
-			<label class="fs-label" for="customer-email">Email Address</label>
-			<input class="fs-input" id="customer-email" name="customer-email" required/>
-		</div>
-		<div class="fs-field">
-			<label class="fs-label" for="order-date">Order Date</label>
-			<input class="fs-input" id="order-date" name="order-date" placeholder="YYYY-MM-DD" required/>
-		</div>
-		<div class="fs-field">
-			<label class="fs-label" for="delivery-option">
-				Preferred Delivery Option
-			</label>
-			<select class="fs-select" id="delivery-option" name="delivery-option" required>
-				<option value="pick-up">Pick-Up</option>
-				<option value="home-delivery">Home Delivery</option>
-			</select>
-		</div>
-		<div class="fs-field">
-			<label class="fs-label" for="baked-goods-type">Type of Baked Goods</label>
-			<select class="fs-select" id="baked-goods-type" name="baked-goods-type" required>
-				<option value="cakes">Cakes</option>
-				<option value="cookies">Cookies</option>
-				<option value="pies">Pies</option>
-				<option value="bread">Bread</option>
-			</select>
-		</div>
-		<div class="fs-field">hi
-			<label class="fs-label" for="customization-options">
-				Customization Options
-			</label>
-			<textarea class="fs-textarea" id="customization-options" name="customization-options" placeholder="Specify flavors, fillings, sizes, or any other customizations for your order"></textarea>
-		</div>
-		<div class="fs-button-group">
-			<button class="fs-button" type="submit">Submit</button>
-		</div>
-	</form>
-{% endblock %}
+        nav {
+            margin-top: 10px;
+        }
 
+        nav a {
+            color: #f4d03f;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
 
-{# {% block body %}
-	<h1>Create new Product</h1>
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-	{{ form_start(form) }}
+        main {
+            padding: 60px 20px;
+        }
 
-	<div class="fs-field">
-		{{ form_label(form.name, 'Product Name', { 'label_attr': {'class': 'fs-label'} }) }}
-		{{ form_widget(form.name, { 'attr': {'class': 'fs-input', 'placeholder': 'Enter product name'} }) }}
-		{{ form_errors(form.name) }}
-	</div>
+        main h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
 
-	<div class="fs-field">
-		{{ form_label(form.description, 'Description', { 'label_attr': {'class': 'fs-label'} }) }}
-		{{ form_widget(form.description, { 'attr': {'class': 'fs-textarea', 'placeholder': 'Enter product description'} }) }}
-		{{ form_errors(form.description) }}
-	</div>
+        main p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
 
-	<div class="fs-field">
-		{{ form_label(form.price, 'Price', { 'label_attr': {'class': 'fs-label'} }) }}
-		{{ form_widget(form.price, { 'attr': {'class': 'fs-input', 'placeholder': '0.00'} }) }}
-		{{ form_errors(form.price) }}
-	</div>
+        footer {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Lux Hotel</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Rooms</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
 
-	<div class="fs-field">
-		{{ form_label(form.image, 'Product Image', { 'label_attr': {'class': 'fs-label'} }) }}
-		{{ form_widget(form.image, { 'attr': {'class': 'fs-input'} }) }}
-		{{ form_errors(form.image) }}
-	</div>
+    <main>
+        <h2>Experience Luxury and Comfort</h2>
+        <p>
+            At Lux Hotel, we provide top-tier hospitality with world-class rooms,
+            exquisite dining, and exceptional service. Whether you’re visiting for
+            business or leisure, your comfort is our priority.
+        </p>
+    </main>
 
-	<div class="fs-button-group">
-		<button class="fs-button" type="submit">{{ button_label|default('Save') }}</button>
-	</div>
-
-	{{ form_end(form) }}
-
-
-{% endblock %} #}
+    <footer>
+        &copy; {{ "now"|date("Y") }} Lux Hotel. All rights reserved.
+    </footer>
+</body>
+</html>
