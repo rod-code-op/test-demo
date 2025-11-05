@@ -6,13 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-final class HomeController extends AbstractController
+class DashboardController extends AbstractController
 {
-    #[Route('/', name: 'home')]
+    #[Route('/dashboard', name: 'app_dashboard')]
     public function index(): Response
     {
-        return $this->render('home/index.html.twig', [
-            'message' => 'Welcome to Lux Hotel!',
-        ]);
+        return new Response("Welcome to the dashboard! (Protected Area)");
     }
 }

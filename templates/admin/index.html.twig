@@ -1,0 +1,128 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        background: #8fc5fc;
+        font-family: 'Lato', 'Segoe UI', sans-serif;
+        color: #333;
+    }
+
+    .dashboard-container {
+        max-width: 900px;
+        margin: 60px auto;
+        background: #77b2f5;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 40px 50px;
+    }
+
+    .dashboard-qoute {
+        background-color: #7c7ee9;
+        padding: 10px 10px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 4rem;
+        margin-bottom: 2px;
+        color: #5f1135;
+    }
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        color: #222;
+    }
+
+    .dashboard-intro {
+        text-align: center;
+        margin-bottom: 35px;
+        color: #555;
+        font-size: 1.05rem;
+    }
+
+    .dashboard-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .dashboard-card {
+        flex: 1 1 240px;
+        text-align: center;
+        background: #f9fafb;
+        border: 1px solid #e3e6ea;
+        border-radius: 10px;
+        padding: 25px;
+        transition: all 0.3s;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .dashboard-card:hover {
+        background: #7c7ee9;
+        color: #5f1135;
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .dashboard-card h2 {
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+    .dashboard-card p {
+        font-size: 0.95rem;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 40px;
+        color: #888;
+        font-size: 0.9rem;
+    }
+</style>
+
+<div class="dashboard-container">
+    <div class="dashboard-qoute">
+        <h1>Luxury and Comfort Suites</h1>
+    </div>
+    <h2>🏨 Admin Dashboard</h2>
+
+    <p class="dashboard-intro">
+        Welcome back, Rod! Use the shortcuts below to manage rooms and monitor your hotel system.
+    </p>
+
+    <div class="dashboard-links">
+        <a href="{{ path('admin_room_new') }}" class="dashboard-card">
+            <h2>➕ Add Room</h2>
+            <p>Create and add new rooms to the system.</p>
+        </a>
+
+        <a href="{{ path('app_admin_rooms') }}" class="dashboard-card">
+            <h2>🛏️ View Rooms</h2>
+            <p>See all available rooms in your database.</p>
+        </a>
+
+
+        <a href="#" class="dashboard-card">
+            <h2>👥 Manage Users</h2>
+            <p>View or update registered users and admins.</p>
+        </a>
+
+        <a href="#" class="dashboard-card">
+            <h2>📊 Reports</h2>
+            <p>Generate reports and monitor hotel performance.</p>
+        </a>
+    </div>
+
+    <footer>
+        <p>Lux Hotel Admin Panel © {{ "now"|date("Y") }}</p>
+    </footer>
+</div>
+{% endblock %}

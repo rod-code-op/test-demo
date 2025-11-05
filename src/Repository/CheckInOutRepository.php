@@ -2,22 +2,22 @@
 
 namespace App\Repository;
 
-use App\Entity\Category;
+use App\Entity\CheckInOut;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Category>
+ * @extends ServiceEntityRepository<CheckInOut>
  */
-class CategoryRepository extends ServiceEntityRepository
+class CheckInOutRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Category::class);
+        parent::__construct($registry, CheckInOut::class);
     }
 
     //    /**
-    //     * @return Category[] Returns an array of Category objects
+    //     * @return CheckInOut[] Returns an array of CheckInOut objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class CategoryRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?Category
+    //    public function findOneBySomeField($value): ?CheckInOut
     //    {
     //        return $this->createQueryBuilder('c')
     //            ->andWhere('c.exampleField = :val')
