@@ -25,12 +25,26 @@
         border-radius: 12px;
     }
 
+    .hotel-logo {
+        width: 200px;
+        display: block;
+        margin: 20px auto;
+        transition: all 1s ease;
+        cursor: pointer;
+    }
+
+    .hotel-logo:hover {
+        transform: scale(1.29);
+    }
+
+
     h1 {
         text-align: center;
         font-family: 'Times New Roman', Times, serif;
         font-size: 4rem;
         margin-bottom: 2px;
         color: #5f1135;
+        
     }
     h2 {
         text-align: center;
@@ -90,7 +104,9 @@
 
 <div class="dashboard-container">
     <div class="dashboard-qoute">
-        <h1>Luxury and Comfort Suites</h1>
+        <h1>
+            <img src="{{ asset('images/hotel-logo.png') }}" alt="Hotel Logo" class="hotel-logo">Luxury and Comfort Suites
+        </h1>
     </div>
     <h2>🏨 Admin Dashboard</h2>
 
